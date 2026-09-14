@@ -1,0 +1,1208 @@
+/* =========================================
+   ROOTED - SUBSCRIBE PAGE
+========================================= */
+
+.subscribe-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #120402;
+  color: #f5ead0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.subscribe-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  /*
+    Navbar is positioned absolutely.
+    This top padding creates enough space
+    so the hero does not sit underneath it.
+  */
+  padding: 145px 44px 90px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 18% 20%,
+      rgba(93, 38, 24, 0.17),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 82% 60%,
+      rgba(74, 27, 18, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #100301 0%,
+      #1a0603 45%,
+      #100201 100%
+    );
+}
+
+
+/* =========================================
+   ARCHIVAL TEXTURE
+========================================= */
+
+.subscribe-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  opacity: 0.24;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.018) 0px,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+
+  mix-blend-mode: screen;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.subscribe-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.subscribe-hero {
+  width: 100%;
+
+  text-align: center;
+
+  padding-top: 0;
+
+  margin-bottom: 100px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.subscribe-eyebrow {
+  margin: 0 0 28px;
+
+  color: #a45b3e;
+
+  font-size: clamp(14px, 1vw, 18px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.subscribe-title {
+  margin: 0;
+
+  color: #fff8dc;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(70px, 9vw, 145px);
+
+  font-weight: 500;
+
+  line-height: 0.84;
+
+  letter-spacing: 0.035em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   ROOTED LOGO AREA
+========================================= */
+
+.subscribe-logo {
+  position: relative;
+
+  width: min(1450px, 88vw);
+
+  height: 260px;
+
+  margin: 65px auto 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TOP LINE
+========================================= */
+
+.subscribe-logo::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 20%;
+
+  height: 1px;
+
+  background: rgba(184, 130, 72, 0.52);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.subscribe-logo::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 20%;
+
+  height: 1px;
+
+  background: rgba(184, 130, 72, 0.52);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.subscribe-logo img {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: min(1050px, 72vw);
+
+  max-width: none;
+
+  height: auto;
+
+  object-fit: contain;
+
+  transform: scale(1.45);
+
+  transform-origin: center center;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.subscribe-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(450px, 1.1fr);
+
+  gap: 100px;
+
+  align-items: start;
+
+  margin-top: 0;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.subscribe-introduction {
+  padding-top: 10px;
+
+  max-width: 560px;
+}
+
+
+/* =========================================
+   INTRO LABEL
+========================================= */
+
+.subscribe-label {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #b87554;
+
+  font-size: clamp(20px, 1.55vw, 29px);
+
+  font-weight: 600;
+
+  letter-spacing: 0.09em;
+
+  line-height: 1.1;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   INTRO PARAGRAPHS
+========================================= */
+
+.subscribe-introduction p {
+  margin: 0 0 28px;
+
+  color: #f8efd9;
+
+  font-size: clamp(18px, 1.35vw, 23px);
+
+  line-height: 1.5;
+}
+
+.subscribe-introduction p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   FORM WRAPPER
+========================================= */
+
+.subscribe-form-wrapper {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+
+  max-width: 650px;
+
+  margin-left: auto;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.subscribe-form {
+  width: 100%;
+}
+
+
+/* =========================================
+   FORM FIELD
+========================================= */
+
+.subscribe-field {
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   FIELD LABEL
+========================================= */
+
+.subscribe-field label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #b87554;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   INPUT + SELECT
+========================================= */
+
+.subscribe-field input,
+.subscribe-field select {
+  width: 100%;
+
+  height: 60px;
+
+  padding: 0 20px;
+
+  border:
+    1px solid rgba(184, 130, 72, 0.42);
+
+  border-radius: 0;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  background: rgba(31, 9, 5, 0.72);
+
+  color: #f8efd9;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.subscribe-field input::placeholder {
+  color: rgba(245, 234, 208, 0.45);
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.subscribe-field select {
+  appearance: none;
+
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #b87554 50%
+    ),
+    linear-gradient(
+      135deg,
+      #b87554 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 20px) 26px,
+    calc(100% - 14px) 26px;
+
+  background-size:
+    6px 6px,
+    6px 6px;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   SELECT OPTION
+========================================= */
+
+.subscribe-field select option {
+  background: #1a0603;
+
+  color: #f8efd9;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.subscribe-field input:focus,
+.subscribe-field select:focus {
+  border-color: #b87554;
+
+  background: rgba(45, 13, 8, 0.88);
+
+  box-shadow:
+    0 0 0 1px rgba(184, 117, 84, 0.12);
+}
+
+
+/* =========================================
+   SUBSCRIBE BUTTON
+========================================= */
+
+.subscribe-button {
+  width: 100%;
+
+  min-height: 62px;
+
+  margin-top: 8px;
+
+  padding: 15px 24px;
+
+  border:
+    1px solid #b87554;
+
+  border-radius: 0;
+
+  background: #a45b3e;
+
+  color: #fff8dc;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================
+   BUTTON ARROW
+========================================= */
+
+.subscribe-button span {
+  font-size: 22px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.subscribe-button:hover {
+  background: #c07857;
+
+  border-color: #c07857;
+
+  color: #fffdf0;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PRIVACY
+========================================= */
+
+.subscribe-privacy {
+  margin: 18px 0 0;
+
+  color: rgba(245, 234, 208, 0.48);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   SUCCESS STATE
+========================================= */
+
+.subscribe-success {
+  width: 100%;
+
+  min-height: 430px;
+
+  padding: 55px 50px;
+
+  border:
+    1px solid rgba(184, 130, 72, 0.4);
+
+  box-sizing: border-box;
+
+  background: rgba(27, 7, 4, 0.72);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   SUCCESS MARK
+========================================= */
+
+.success-mark {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 25px;
+
+  border:
+    1px solid #b87554;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #e9c985;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   SUCCESS LABEL
+========================================= */
+
+.success-label {
+  margin-bottom: 20px;
+
+  color: #a45b3e;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   SUCCESS TITLE
+========================================= */
+
+.subscribe-success h2 {
+  margin: 0 0 22px;
+
+  color: #fff8dc;
+
+  font-size: clamp(32px, 3vw, 50px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================
+   SUCCESS TEXT
+========================================= */
+
+.subscribe-success p {
+  max-width: 480px;
+
+  margin: 0 0 30px;
+
+  color: #f8efd9;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   SUBSCRIBE AGAIN
+========================================= */
+
+.subscribe-again {
+  padding: 13px 22px;
+
+  border:
+    1px solid rgba(184, 130, 72, 0.55);
+
+  background: transparent;
+
+  color: #d5a96a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.subscribe-again:hover {
+  background: rgba(184, 130, 72, 0.1);
+
+  color: #fff8dc;
+}
+
+
+/* =========================================
+   BOTTOM STATEMENT
+========================================= */
+
+.subscribe-bottom {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 105px;
+}
+
+
+/* =========================================
+   BOTTOM LINES
+========================================= */
+
+.subscribe-bottom span {
+  display: block;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(184, 130, 72, 0.35);
+}
+
+
+/* =========================================
+   BOTTOM TEXT
+========================================= */
+
+.subscribe-bottom p {
+  margin: 0;
+
+  color: rgba(245, 234, 208, 0.55);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.16em;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1600px) {
+
+  .subscribe-section {
+    padding-top: 155px;
+
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .subscribe-hero {
+    margin-bottom: 110px;
+  }
+
+  .subscribe-title {
+    font-size: clamp(90px, 8vw, 145px);
+  }
+
+  .subscribe-logo {
+    width: min(1500px, 88vw);
+
+    height: 290px;
+
+    margin-top: 70px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+  .subscribe-logo img {
+    width: 1100px;
+
+    transform: scale(1.5);
+  }
+
+  .subscribe-content {
+    gap: 130px;
+  }
+
+  .subscribe-introduction {
+    max-width: 600px;
+  }
+
+  .subscribe-introduction p {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .subscribe-section {
+    padding:
+      125px
+      35px
+      70px;
+  }
+
+  .subscribe-hero {
+    margin-bottom: 85px;
+  }
+
+  .subscribe-eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .subscribe-title {
+    font-size: clamp(65px, 10vw, 110px);
+
+    line-height: 0.86;
+  }
+
+  .subscribe-logo {
+    width: 90vw;
+
+    height: 210px;
+
+    margin-top: 50px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+  .subscribe-logo img {
+    width: min(850px, 75vw);
+
+    transform: scale(1.35);
+  }
+
+  .subscribe-content {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 55px;
+  }
+
+  .subscribe-introduction p {
+    font-size: 18px;
+  }
+
+  .subscribe-form-wrapper {
+    max-width: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .subscribe-section {
+    padding:
+      105px
+      24px
+      55px;
+  }
+
+  .subscribe-hero {
+    margin-bottom: 65px;
+  }
+
+  .subscribe-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+  }
+
+  .subscribe-title {
+    font-size: clamp(54px, 15vw, 82px);
+
+    line-height: 0.87;
+
+    letter-spacing: 0.02em;
+  }
+
+  .subscribe-logo {
+    width: 100%;
+
+    height: 150px;
+
+    margin-top: 40px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+  .subscribe-logo::before {
+    top: 18%;
+  }
+
+  .subscribe-logo::after {
+    bottom: 18%;
+  }
+
+  .subscribe-logo img {
+    width: 90vw;
+
+    transform: scale(1.22);
+  }
+
+  .subscribe-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 55px;
+
+    margin-top: 0;
+  }
+
+  .subscribe-introduction {
+    max-width: none;
+
+    padding-top: 0;
+  }
+
+  .subscribe-label {
+    margin-bottom: 22px;
+
+    font-size: 20px;
+  }
+
+  .subscribe-introduction p {
+    font-size: 18px;
+
+    line-height: 1.5;
+  }
+
+  .subscribe-form-wrapper {
+    width: 100%;
+
+    max-width: none;
+  }
+
+  .subscribe-field {
+    margin-bottom: 24px;
+  }
+
+  .subscribe-field label {
+    font-size: 13px;
+  }
+
+  .subscribe-field input,
+  .subscribe-field select {
+    height: 55px;
+
+    font-size: 16px;
+  }
+
+  .subscribe-button {
+    min-height: 58px;
+  }
+
+  .subscribe-success {
+    min-height: 400px;
+
+    padding: 40px 25px;
+  }
+
+  .subscribe-success h2 {
+    font-size: 32px;
+  }
+
+  .subscribe-bottom {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    margin-top: 70px;
+  }
+
+  .subscribe-bottom span {
+    display: none;
+  }
+
+  .subscribe-bottom p {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .subscribe-section {
+    padding:
+      95px
+      18px
+      45px;
+  }
+
+  .subscribe-hero {
+    margin-bottom: 55px;
+  }
+
+  .subscribe-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 0.13em;
+  }
+
+  .subscribe-title {
+    font-size: 52px;
+
+    line-height: 0.88;
+  }
+
+  .subscribe-logo {
+    height: 125px;
+
+    margin-top: 30px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+  .subscribe-logo img {
+    width: 94vw;
+
+    transform: scale(1.12);
+  }
+
+  .subscribe-label {
+    font-size: 18px;
+  }
+
+  .subscribe-introduction p {
+    font-size: 17px;
+  }
+
+  .subscribe-field label {
+    font-size: 12px;
+  }
+
+  .subscribe-field input,
+  .subscribe-field select {
+    height: 52px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .subscribe-button {
+    font-size: 14px;
+
+    letter-spacing: 0.12em;
+  }
+
+  .subscribe-privacy {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+  .subscribe-section {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+  .subscribe-title {
+    font-size: 46px;
+  }
+
+  .subscribe-logo {
+    height: 110px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+  .subscribe-logo img {
+    width: 96vw;
+
+    transform: scale(1.06);
+  }
+
+  .subscribe-introduction p {
+    font-size: 16px;
+  }
+
+  .subscribe-field input,
+  .subscribe-field select {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .subscribe-page *,
+  .subscribe-page *::before,
+  .subscribe-page *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}
+
+.subscribe-error {
+  margin: 16px 0 0;
+  color: #f0a58d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.subscribe-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}

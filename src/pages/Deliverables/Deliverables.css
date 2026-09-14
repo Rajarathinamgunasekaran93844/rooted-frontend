@@ -1,0 +1,721 @@
+/* =========================================
+   ROOTED - DELIVERABLES PAGE
+========================================= */
+
+.deliverables-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #120402;
+  color: #f5ead0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.deliverables-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  /*
+    Navbar sits above the page with absolute positioning.
+    Reserve space for it here.
+  */
+  padding: 150px 44px 90px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 18% 20%,
+      rgba(93, 38, 24, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 80% 65%,
+      rgba(74, 27, 18, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #100301 0%,
+      #1a0603 45%,
+      #100201 100%
+    );
+}
+
+
+/* =========================================
+   ARCHIVAL TEXTURE
+========================================= */
+
+.deliverables-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  opacity: 0.25;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.018) 0px,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+
+  mix-blend-mode: screen;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.deliverables-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.deliverables-hero {
+  width: 100%;
+
+  padding-top: 0;
+
+  margin: 0 0 85px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   COMING SOON
+========================================= */
+
+.deliverables-coming {
+  margin: 0;
+
+  color: #b87554;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(16px, 1.1vw, 20px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   ROOTED LOGO AREA
+========================================= */
+
+.deliverables-brand {
+  position: relative;
+
+  width: min(1450px, 88vw);
+
+  height: 250px;
+
+  margin: 55px auto 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOP DECORATIVE LINE
+========================================= */
+
+.deliverables-brand::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 20%;
+
+  height: 1px;
+
+  background: rgba(184, 130, 72, 0.55);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BOTTOM DECORATIVE LINE
+========================================= */
+
+.deliverables-brand::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 20%;
+
+  height: 1px;
+
+  background: rgba(184, 130, 72, 0.55);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   ROOTED LOGO
+========================================= */
+
+.deliverables-brand img {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: min(1050px, 72vw);
+
+  max-width: none;
+
+  height: auto;
+
+  padding: 0;
+  margin: 0;
+
+  object-fit: contain;
+
+  background: transparent;
+
+  transform: scale(1.45);
+
+  transform-origin: center center;
+}
+
+
+/* =========================================
+   DELIVERABLES GRID
+========================================= */
+
+.deliverables-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  column-gap: 70px;
+
+  row-gap: 75px;
+
+  width: 100%;
+
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   DELIVERABLE ITEM
+========================================= */
+
+.deliverable-item {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  min-height: 225px;
+
+  padding: 0 0 32px;
+
+  border-bottom:
+    1px solid rgba(184, 130, 72, 0.28);
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   DELIVERABLE NUMBER
+========================================= */
+
+.deliverable-item::before {
+  content: "0" counter(deliverable);
+
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+  color: rgba(184, 130, 72, 0.30);
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+}
+
+
+.deliverables-grid {
+  counter-reset: deliverable;
+}
+
+.deliverable-item {
+  counter-increment: deliverable;
+}
+
+
+/* =========================================
+   DELIVERABLE TITLE
+========================================= */
+
+.deliverable-item h2 {
+  margin: 0 0 25px;
+
+  color: #b87554;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(22px, 1.55vw, 30px);
+
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  letter-spacing: 0.075em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.deliverable-item p {
+  margin: 0;
+
+  max-width: 500px;
+
+  color: #f8efd9;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(17px, 1.18vw, 21px);
+
+  font-weight: 400;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.deliverable-item:hover {
+  border-bottom-color:
+    rgba(184, 130, 72, 0.58);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   DESKTOP POSITIONING
+========================================= */
+
+.deliverable-1 {
+  grid-column: 1;
+}
+
+.deliverable-2 {
+  grid-column: 2;
+}
+
+.deliverable-3 {
+  grid-column: 3;
+}
+
+.deliverable-4 {
+  grid-column: 1;
+}
+
+.deliverable-5 {
+  grid-column: 2;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1600px) {
+
+  .deliverables-section {
+    padding:
+      155px
+      60px
+      100px;
+  }
+
+  .deliverables-container {
+    max-width: 1650px;
+  }
+
+  .deliverables-hero {
+    margin-bottom: 90px;
+  }
+
+  .deliverables-brand {
+    width: min(1500px, 88vw);
+
+    height: 275px;
+
+    margin-top: 60px;
+  }
+
+  .deliverables-brand img {
+    width: 1100px;
+
+    transform: scale(1.5);
+  }
+
+  .deliverables-grid {
+    column-gap: 80px;
+
+    row-gap: 85px;
+  }
+
+  .deliverable-item {
+    min-height: 235px;
+  }
+
+  .deliverable-item h2 {
+    font-size: 31px;
+  }
+
+  .deliverable-item p {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================
+   TABLET / SMALL DESKTOP
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .deliverables-section {
+    padding:
+      125px
+      35px
+      75px;
+  }
+
+  .deliverables-hero {
+    margin-bottom: 75px;
+  }
+
+  .deliverables-brand {
+    width: 90vw;
+
+    height: 215px;
+
+    margin-top: 45px;
+  }
+
+  .deliverables-brand img {
+    width: min(850px, 75vw);
+
+    transform: scale(1.35);
+  }
+
+  .deliverables-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    column-gap: 45px;
+
+    row-gap: 65px;
+  }
+
+  .deliverable-1,
+  .deliverable-2,
+  .deliverable-3,
+  .deliverable-4,
+  .deliverable-5 {
+    grid-column: auto;
+  }
+
+  .deliverable-item {
+    max-width: 100%;
+
+    min-height: 220px;
+  }
+
+  .deliverable-item h2 {
+    font-size: clamp(21px, 2.2vw, 27px);
+  }
+
+  .deliverable-item p {
+    max-width: 100%;
+
+    font-size: clamp(17px, 1.8vw, 20px);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .deliverables-section {
+    padding:
+      105px
+      24px
+      60px;
+  }
+
+  .deliverables-hero {
+    margin-bottom: 60px;
+  }
+
+  .deliverables-coming {
+    font-size: 13px;
+
+    letter-spacing: 0.15em;
+  }
+
+  .deliverables-brand {
+    width: 100%;
+
+    height: 150px;
+
+    margin-top: 40px;
+  }
+
+  .deliverables-brand::before {
+    top: 18%;
+  }
+
+  .deliverables-brand::after {
+    bottom: 18%;
+  }
+
+  .deliverables-brand img {
+    width: 90vw;
+
+    transform: scale(1.2);
+  }
+
+  .deliverables-grid {
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+
+    row-gap: 48px;
+  }
+
+  .deliverable-item {
+    width: 100%;
+
+    max-width: none;
+
+    min-height: auto;
+
+    padding-bottom: 30px;
+  }
+
+  .deliverable-item h2 {
+    margin-bottom: 18px;
+
+    font-size: 21px;
+
+    line-height: 1.12;
+
+    letter-spacing: 0.065em;
+  }
+
+  .deliverable-item p {
+    max-width: none;
+
+    font-size: 18px;
+
+    line-height: 1.48;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .deliverables-section {
+    padding:
+      95px
+      18px
+      50px;
+  }
+
+  .deliverables-hero {
+    margin-bottom: 50px;
+  }
+
+  .deliverables-coming {
+    font-size: 11px;
+
+    letter-spacing: 0.13em;
+  }
+
+  .deliverables-brand {
+    height: 125px;
+
+    margin-top: 30px;
+  }
+
+  .deliverables-brand img {
+    width: 94vw;
+
+    transform: scale(1.12);
+  }
+
+  .deliverables-grid {
+    row-gap: 42px;
+  }
+
+  .deliverable-item h2 {
+    font-size: 19px;
+
+    letter-spacing: 0.055em;
+  }
+
+  .deliverable-item p {
+    font-size: 17px;
+
+    line-height: 1.48;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+  .deliverables-section {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+  .deliverables-brand {
+    height: 110px;
+  }
+
+  .deliverables-brand img {
+    width: 96vw;
+
+    transform: scale(1.06);
+  }
+
+  .deliverable-item h2 {
+    font-size: 18px;
+  }
+
+  .deliverable-item p {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .deliverables-page *,
+  .deliverables-page *::before,
+  .deliverables-page *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}
