@@ -10,7 +10,7 @@ import Subscribe from "./pages/Subscribe/Subscribe";
 import Research from "./pages/Research/Research";
 import NotFound from "./pages/NotFound/NotFound";
 import RouteEffects from "./components/RouteEffects/RouteEffects";
-import Home from "./Pages/Home/Home";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
