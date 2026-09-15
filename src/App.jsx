@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home/Home";
 import Mission from "./pages/Mission/Mission";
 import Instruments from "./pages/Instruments/Instruments";
 import InstrumentDetails from "./pages/InstrumentDetails/InstrumentDetails";
@@ -11,6 +10,7 @@ import Subscribe from "./pages/Subscribe/Subscribe";
 import Research from "./pages/Research/Research";
 import NotFound from "./pages/NotFound/NotFound";
 import RouteEffects from "./components/RouteEffects/RouteEffects";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
