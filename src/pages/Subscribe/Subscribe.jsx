@@ -136,6 +136,7 @@ function Subscribe() {
                       type="text"
                       autoComplete="name"
                       placeholder="Enter your name"
+                      maxLength={100}
                       value={formData.name}
                       onChange={handleChange}
                       disabled={isSubmitting}
@@ -157,6 +158,7 @@ function Subscribe() {
                       type="email"
                       autoComplete="email"
                       placeholder="Enter your email address"
+                      maxLength={254}
                       value={formData.email}
                       onChange={handleChange}
                       disabled={isSubmitting}

@@ -27,7 +27,7 @@
       "destination": "https://rooted-backend-m9hc.onrender.com/api/catalog/:path*"
     },
     {
-      "source": "^/(?!api/)(.*)$",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]
