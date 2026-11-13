@@ -213,6 +213,12 @@
 ========================================= */
 
 .instrument-action-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   margin-top: 30px;
 
   padding: 15px 30px;
@@ -232,7 +238,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  cursor: pointer;
+  text-decoration: none;
 
   transition:
     transform 0.3s ease,

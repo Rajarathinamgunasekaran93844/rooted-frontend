@@ -1,5 +1,5 @@
 import "./Deliverables.css";
-import rootedLogo from "../../assets/rooted_logo.png";
+import rootedLogo from "../../assets/rooted_logo_optimized.png";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
@@ -34,15 +34,16 @@ function Deliverables() {
 
   return (
         
-    <main className="deliverables-page">
-   <Navbar/>
-      <section className="deliverables-section">
+    <div className="deliverables-page">
+      <Navbar />
+      <main className="deliverables-section">
          
         <div className="deliverables-container">
 
           {/* HERO */}
           <header className="deliverables-hero">
             <p className="deliverables-coming">COMING SOON</p>
+            <h1 className="deliverables-title">DELIVERABLES</h1>
 
             <div className="deliverables-brand">
              <img src={rootedLogo} alt="ROOTED" />
@@ -63,9 +64,9 @@ function Deliverables() {
           </section>
 
         </div>
-      </section>
-      <Footer/>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

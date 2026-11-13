@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 import "./InstrumentDetails.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import useCatalogData from "../../hooks/useCatalogData";
 
-import yalImage from "../../assets/instruments/Yal_358_454.png";
-import kinnaramImage from "../../assets/instruments/kinnaram_358_454.png";
-import panchamugaImage from "../../assets/instruments/panchamuga_vaathiyam_358_454.png";
-import tutariImage from "../../assets/instruments/Tutari_358_454.png";
-import paraiImage from "../../assets/instruments/Parai_358_454.png";
+import yalImage from "../../assets/instruments/Yal_358_454.jpg";
+import kinnaramImage from "../../assets/instruments/kinnaram_358_454.jpg";
+import panchamugaImage from "../../assets/instruments/panchamuga_vaathiyam_358_454.jpg";
+import tutariImage from "../../assets/instruments/Tutari_358_454.jpg";
+import paraiImage from "../../assets/instruments/Parai_358_454.jpg";
 
 
 const instruments = {
@@ -106,6 +107,14 @@ const instruments = {
   },
 };
 
+const instrumentImages = {
+  yal: yalImage,
+  kinnaram: kinnaramImage,
+  panchamuga_vaathiyam: panchamugaImage,
+  tutari: tutariImage,
+  parai: paraiImage,
+};
+
 
 function InstrumentDetails() {
 
@@ -115,32 +124,44 @@ function InstrumentDetails() {
   /* CONVERT URL TO LOWERCASE */
   const instrumentSlug = slug?.toLowerCase();
 
-  /* FIND INSTRUMENT */
-  const instrument = instruments[instrumentSlug];
+  const fallbackInstrument = instruments[instrumentSlug];
+  const catalogInstrument = useCatalogData(
+    instrumentSlug
+      ? `/api/catalog/instruments/${encodeURIComponent(instrumentSlug)}`
+      : null,
+    fallbackInstrument,
+  );
+  const instrument = catalogInstrument
+    ? {
+        ...catalogInstrument,
+        image: instrumentImages[instrumentSlug] || yalImage,
+        button: catalogInstrument.actionLabel || catalogInstrument.button,
+      }
+    : undefined;
 
 
   /* NOT FOUND */
   if (!instrument) {
     return (
-      <main className="instrument-details-wrapper">
+      <div className="instrument-details-wrapper">
         <Navbar />
-        <section className="instrument-not-found">
+        <main className="instrument-not-found">
           <h1>Instrument Not Found</h1>
 
           <p>
             The requested instrument could not be found.
           </p>
-        </section>
+        </main>
         <Footer />
-      </main>
+      </div>
     );
   }
 
 
   return (
-    <main className="instrument-details-wrapper">
+    <div className="instrument-details-wrapper">
       <Navbar />
-      <section className="instrument-details-page">
+      <main className="instrument-details-page">
 
       {/* FULL BACKGROUND IMAGE */}
       <div
@@ -179,6 +200,9 @@ function InstrumentDetails() {
             <img
               src={instrument.image}
               alt={instrument.title}
+              width="1114"
+              height="1412"
+              decoding="async"
             />
 
           </div>
@@ -196,9 +220,14 @@ function InstrumentDetails() {
             </ul>
 
 
-            <button className="instrument-action-button">
+            <a
+              className="instrument-action-button"
+              href="https://www.youtube.com/c/Hithamusic"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {instrument.button}
-            </button>
+            </a>
 
           </div>
 
@@ -206,9 +235,9 @@ function InstrumentDetails() {
 
       </div>
 
-      </section>
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
 

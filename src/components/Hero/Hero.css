@@ -149,9 +149,15 @@
   gap: 22px;
 }
 
-.hero-buttons button {
+.hero-buttons a {
   width: 140px;
   height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 
   border-radius: 50px;
 
@@ -161,8 +167,6 @@
   font-weight: 600;
 
   line-height: 1.1;
-
-  cursor: pointer;
 
   transition:
     transform 0.3s ease,
@@ -233,7 +237,7 @@
   }
 
   .hero-title {
-    font-size: clamp(65px, 20vw, 100px);
+    font-size: clamp(52px, 17vw, 88px);
 
     margin-bottom: 20px;
   }
@@ -250,7 +254,7 @@
     gap: 14px;
   }
 
-  .hero-buttons button {
+  .hero-buttons a {
     width: 160px;
   }
 }

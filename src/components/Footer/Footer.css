@@ -44,17 +44,21 @@
 ========================= */
 
 .footer-logo {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 56px;
+  overflow: hidden;
   margin-bottom: 30px;
   text-decoration: none;
 }
 
 .footer-logo img {
   display: block;
-
-  width: 220px;
-  max-width: 100%;
-
+  width: 440px;
+  max-width: none;
+  flex: 0 0 440px;
   height: auto;
 
   object-fit: contain;
@@ -223,8 +227,14 @@
     grid-column: span 2;
   }
 
-  .footer-logo img {
+  .footer-logo {
     width: 180px;
+    height: 46px;
+  }
+
+  .footer-logo img {
+    width: 360px;
+    flex-basis: 360px;
   }
 
   .footer-brand p {
@@ -264,11 +274,14 @@
   }
 
   .footer-logo {
+    width: 160px;
+    height: 40px;
     margin-bottom: 22px;
   }
 
   .footer-logo img {
-    width: 160px;
+    width: 320px;
+    flex-basis: 320px;
   }
 
   .footer-brand p {

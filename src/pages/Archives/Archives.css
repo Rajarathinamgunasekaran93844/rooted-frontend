@@ -373,6 +373,8 @@
 
   cursor: pointer;
 
+  text-decoration: none;
+
   transition: color 0.3s ease;
 }
 
@@ -470,6 +472,12 @@
 
 
 .featured-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   padding: 17px 30px;
 
   border: 1px solid #d8c4a1;
@@ -486,7 +494,7 @@
 
   letter-spacing: 2px;
 
-  cursor: pointer;
+  text-decoration: none;
 
   transition:
     background 0.3s ease,

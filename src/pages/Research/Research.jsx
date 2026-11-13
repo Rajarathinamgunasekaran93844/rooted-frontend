@@ -1,52 +1,61 @@
-import rootedLogo from "../../assets/rooted_logo.png";
+import rootedLogo from "../../assets/rooted_logo_optimized.png";
 import "./Research.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import useCatalogData from "../../hooks/useCatalogData";
+
+const fallbackResearchAreas = [
+  {
+    number: "01",
+    title: "FIELD DOCUMENTATION",
+    description:
+      "Recording endangered musical practices directly within the communities where they continue to live, evolve and survive.",
+  },
+  {
+    number: "02",
+    title: "INSTRUMENT STUDIES",
+    description:
+      "Examining the construction, materials, acoustics and cultural history of traditional instruments across South India.",
+  },
+  {
+    number: "03",
+    title: "ORAL HISTORIES",
+    description:
+      "Preserving the voices of musicians, craftspeople, elders and communities whose knowledge has traditionally been passed from generation to generation.",
+  },
+  {
+    number: "04",
+    title: "MUSICAL TRADITIONS",
+    description:
+      "Studying the contexts in which traditional music is performed, including rituals, celebrations, ceremonies and everyday community life.",
+  },
+  {
+    number: "05",
+    title: "ARCHIVAL RESEARCH",
+    description:
+      "Connecting contemporary field recordings with historical texts, photographs, manuscripts and existing cultural archives.",
+  },
+  {
+    number: "06",
+    title: "CULTURAL PRESERVATION",
+    description:
+      "Building accessible digital resources that allow endangered sounds, stories and knowledge to remain available for future generations.",
+  },
+];
 
 function Research() {
-  const researchAreas = [
-    {
-      number: "01",
-      title: "FIELD DOCUMENTATION",
-      description:
-        "Recording endangered musical practices directly within the communities where they continue to live, evolve and survive.",
-    },
-    {
-      number: "02",
-      title: "INSTRUMENT STUDIES",
-      description:
-        "Examining the construction, materials, acoustics and cultural history of traditional instruments across South India.",
-    },
-    {
-      number: "03",
-      title: "ORAL HISTORIES",
-      description:
-        "Preserving the voices of musicians, craftspeople, elders and communities whose knowledge has traditionally been passed from generation to generation.",
-    },
-    {
-      number: "04",
-      title: "MUSICAL TRADITIONS",
-      description:
-        "Studying the contexts in which traditional music is performed, including rituals, celebrations, ceremonies and everyday community life.",
-    },
-    {
-      number: "05",
-      title: "ARCHIVAL RESEARCH",
-      description:
-        "Connecting contemporary field recordings with historical texts, photographs, manuscripts and existing cultural archives.",
-    },
-    {
-      number: "06",
-      title: "CULTURAL PRESERVATION",
-      description:
-        "Building accessible digital resources that allow endangered sounds, stories and knowledge to remain available for future generations.",
-    },
-  ];
+  const catalogResearchAreas = useCatalogData(
+    "/api/catalog/research-areas",
+    fallbackResearchAreas,
+  );
+  const researchAreas = Array.isArray(catalogResearchAreas)
+    ? catalogResearchAreas
+    : fallbackResearchAreas;
 
   return (
-    <main className="research-page">
-        <Navbar/>
-      <section className="research-section">
+    <div className="research-page">
+      <Navbar />
+      <main className="research-section">
         <div className="research-container">
 
           {/* =========================================
@@ -264,9 +273,9 @@ function Research() {
           </footer>
 
         </div>
-      </section>
-      <Footer/>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

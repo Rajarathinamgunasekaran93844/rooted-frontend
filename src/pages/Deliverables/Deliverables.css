@@ -152,6 +152,15 @@
   white-space: nowrap;
 }
 
+.deliverables-title {
+  margin: 18px 0 0;
+  color: #f5ead0;
+  font-size: clamp(30px, 4vw, 56px);
+  font-weight: 500;
+  letter-spacing: clamp(2px, 0.45vw, 8px);
+  line-height: 1.1;
+}
+
 
 /* =========================================
    ROOTED LOGO AREA

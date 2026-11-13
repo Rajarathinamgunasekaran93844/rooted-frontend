@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 import "./Hero.css";
-import heroImage from "../../assets/background_image.png";
+import heroImage from "../../assets/background_image.jpg";
 
 function Hero() {
   return (
@@ -8,6 +10,8 @@ function Hero() {
         src={heroImage}
         alt="Traditional Indian Musical Instruments"
         className="hero-background"
+        fetchPriority="high"
+        decoding="async"
       />
 
       <div className="hero-overlay"></div>
@@ -24,13 +28,13 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="watch-button">
+          <Link to="/youtube" className="watch-button">
             Watch Now
-          </button>
+          </Link>
 
-          <button className="explore-button">
+          <Link to="/instruments" className="explore-button">
             Explore Saga
-          </button>
+          </Link>
         </div>
       </div>
     </section>

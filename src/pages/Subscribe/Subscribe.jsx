@@ -1,5 +1,5 @@
 import { useState } from "react";
-import rootedLogo from "../../assets/rooted_logo.png";
+import rootedLogo from "../../assets/rooted_logo_optimized.png";
 import "./Subscribe.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -54,9 +54,9 @@ function Subscribe() {
   };
 
   return (
-    <main className="subscribe-page">
-        <Navbar/>
-      <section className="subscribe-section">
+    <div className="subscribe-page">
+      <Navbar />
+      <main className="subscribe-section">
         <div className="subscribe-container">
 
           {/* =========================================
@@ -134,6 +134,7 @@ function Subscribe() {
                       id="name"
                       name="name"
                       type="text"
+                      autoComplete="name"
                       placeholder="Enter your name"
                       value={formData.name}
                       onChange={handleChange}
@@ -154,6 +155,7 @@ function Subscribe() {
                       id="email"
                       name="email"
                       type="email"
+                      autoComplete="email"
                       placeholder="Enter your email address"
                       value={formData.email}
                       onChange={handleChange}
@@ -298,9 +300,9 @@ function Subscribe() {
           </div>
 
         </div>
-      </section>
-      <Footer/>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

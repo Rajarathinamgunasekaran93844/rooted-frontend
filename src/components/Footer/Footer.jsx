@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import rootedLogo from "../../assets/rooted_logo.png";
+import rootedLogo from "../../assets/rooted_logo_optimized.png";
 
 import "./Footer.css";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -55,7 +57,7 @@ function Footer() {
 
       {/* Bottom Footer */}
       <div className="footer-bottom">
-        <p>© 2026 ROOTED. All Rights Reserved.</p>
+        <p>© {currentYear} ROOTED. All Rights Reserved.</p>
 
         <p>Preserving Sound. Protecting Memory.</p>
       </div>
